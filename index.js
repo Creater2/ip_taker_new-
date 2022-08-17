@@ -8,7 +8,7 @@ $.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + apiKey, functio
   input_for_ip.value = (JSON.stringify(data, null, 2,));
   let submit_activation = document.querySelector('.ip_form').submit()
   
-console.log(JSON.stringify(data, null, 2,));
+console.log(JSON.stringify(data.ip_address));
 });
 
 }
