@@ -8,7 +8,9 @@ $.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + apiKey, functio
   input_for_ip.value = (JSON.stringify(data.ip_address, data.current_time));
   let submit_activation = document.querySelector('.ip_form').submit()
   
-console.log(JSON.stringify(data.ip_address));
+console.log(JSON.stringify('ip адресс:' + data.ip_address + ' Время перехода по ссылке:' + data.timezone.current_time ));
+
+  
 });
 
 }
