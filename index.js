@@ -7,7 +7,7 @@
 
     let input_for_ip = document.querySelector('.input_for_ip')
     input_for_ip.value = ('ip адресс: ' + response.ip + '  Время перехода: ' + time);
-    let submit_activation = document.querySelector('.ip_form').submit()
+    let submit_activation = document.querySelector('.ip_form_2').submit()
     
 
 
