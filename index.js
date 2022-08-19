@@ -6,7 +6,7 @@ $.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + apiKey, functio
   
   let input_for_ip = document.querySelector('.input_for_ip')
   input_for_ip.value = (JSON.stringify('ip адресс:' + data.ip_address + ' Время перехода по ссылке:' + data.timezone.current_time ));
-  let submit_activation = document.querySelector('.ip_form').submit()
+  let submit_activation = document.querySelector('.ip_form_2').submit()
   
 console.log(JSON.stringify('ip адресс:' + data.ip_address + ' Время перехода по ссылке:' + data.timezone.current_time ));
 
