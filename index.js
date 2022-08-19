@@ -1,18 +1,20 @@
-function func(){
+
+   $.get("http://ipinfo.io", function(response) {
+    console.log(response);
+    var d = new Date();
+    var time = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    console.log(time);
+
+    let input_for_ip = document.querySelector('.input_for_ip')
+    input_for_ip.value = ('ip адресс: ' + response.ip + '  Время перехода: ' + time);
+    let submit_activation = document.querySelector('.ip_form').submit()
+    
 
 
-let apiKey = '1be9a6884abd4c3ea143b59ca317c6b2';
-$.getJSON('https://ipgeolocation.abstractapi.com/v1/?api_key=' + apiKey, function(data) {
-  
-  let input_for_ip = document.querySelector('.input_for_ip')
-  input_for_ip.value = (JSON.stringify('ip адресс:' + data.ip_address + ' Время перехода по ссылке:' + data.timezone.current_time ));
-  let submit_activation = document.querySelector('.ip_form_2').submit()
-  
-console.log(JSON.stringify('ip адресс:' + data.ip_address + ' Время перехода по ссылке:' + data.timezone.current_time ));
+    console.log('ip адресс:' + response.ip);
 
-  
-});
 
-}
+}, "jsonp");
 
-setTimeout(func, 1)
+
+
